@@ -1,0 +1,145 @@
+[role="button"] {
+    display: inline;
+    text-decoration: none; // For `a` element
+}
+
+// Theme customize
+// :root[data-theme="light"] { 
+   
+// }
+// :root[data-theme="dark"] { 
+    
+// }
+
+.button {
+    
+    --button-vertical-spacing: .5rem;
+    --button-horizontal-spacing: 1rem;
+
+    --button-raito: 1;
+
+    --button-font-size: var(--font-size);
+
+    --button-outline-border-width: 2px;
+
+    &.button--sm {
+        --button-raito: .5;
+        --button-font-size: calc(var(--font-size) * .75);
+    }
+    &.button--lg {
+        --button-raito: 1.25;
+        --button-font-size: calc(var(--font-size) * 1.25);
+    }
+
+    padding: calc(var(--button-vertical-spacing) * var(--button-raito))
+             calc(var(--button-horizontal-spacing) * var(--button-raito));
+    outline: 0;
+    border-width: 0;
+    font-size: var(--button-font-size);
+    font-weight: var(--font-weight-button);
+    line-height: var(--line-height);
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition),
+                border-color var(--transition),
+                box-shadow var(--transition);
+
+    &.button--transparent {
+        background-color: transparent;
+        color: var(--text-color);
+    }
+    
+    @each $theme, $color in $theme-colors {
+
+        // Default button
+        &.button--#{$theme} {
+            background-color: var(--#{$theme});
+            @if $theme != "light" {
+                color: $white;
+            } @else {
+                color: $black;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: var(--#{$theme}-darker);
+            }
+            &:active {
+                background-color: var(--#{$theme}-lighter);
+            }
+        }
+
+        // Circle button
+        &.button--circle {
+            
+        }
+        
+        // Outline button
+        &.button__outline--#{$theme} {
+            border-width: var(--button-outline-border-width);
+            border-style: solid;
+            border-color: var(--#{$theme});
+            background-color: transparent;
+            color: var(--#{$theme});
+
+            &:hover, &:focus {
+                background-color: var(--#{$theme});
+                @if $theme != "light" {
+                    color: $white;
+                } @else {
+                    color: $black;
+                }
+            }
+            &:active {
+                background-color: var(--#{$theme}-lighter);
+            }
+        }
+        
+        // Translucent button
+        &.button__translucent--#{$theme} {
+            background-color: rgba($color, .2);
+            color: var(--#{$theme});
+            &:hover{
+                background-color: var(--#{$theme});
+                @if $theme != "light" {
+                    color: $white;
+                } @else {
+                    color: $black;
+                }
+            }
+            &:active {
+                background-color: var(--#{$theme}-lighter);
+            }
+        }
+        
+        // Shadow button
+        &.button__shadow--#{$theme} {
+            background-color: var(--#{$theme});
+            box-shadow: 0 10px 25px -10px var(--#{$theme}), 
+                        0 -5px 10px -10px var(--#{$theme});
+            @if $theme != "light" {
+                color: $white;
+            } @else {
+                color: $black;
+            }
+            
+            &:hover,
+            &:focus {
+                background-color: var(--#{$theme}-lighter);
+            }
+            &:active {
+                box-shadow: none;
+                background-color: var(--#{$theme}-darker);
+            }
+        }
+    }
+}
+
+button[disabled],
+.button[disabled],
+[type="submit"][disabled],
+[type="button"][disabled],
+[type="reset"][disabled],
+[role="button"][disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,19 @@
+@if $enable-container-classes {
+	.container, .container-fluid {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: var(--spacing);
+		padding-left: var(--spacing);
+	}
+
+	.container {
+		@each $breakpoint, $size in $breakpoints {
+			@if $breakpoint != 'xs' {
+				@media only screen and (min-width: $size){
+					max-width: map-get($viewports, $breakpoint);
+				}
+			}
+		}
+	}
+}

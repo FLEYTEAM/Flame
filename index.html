@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs/flame-logo-bg.png">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/flame.min.css">
+    <style>
+        .m{
+            margin: 15px;
+        }
+        #theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <center>
+            <img src="imgs/flame-logo-bg.png" width="200px">
+        </center>
+        <button type="button" class="button button__outline--primary button--sm" id="theme-switcher">Switch Theme</button>
+    </header>
+
+    <!-- ALERT -->
+    <section id="Alert" class="container">
+        <h1>Alert</h1>
+        <div class="group m">
+            <div><b>Default</b></div>
+            <div class="alert m alert--primary">Alert content</div>
+            <div class="alert m alert--secondary">Alert content</div>
+            <div class="alert m alert--warning">Alert content</div>
+            <div class="alert m alert--danger">Alert content</div>
+            <div class="alert m alert--info">Alert content</div>
+            <div class="alert m alert--success">Alert content</div>
+            <div class="alert m alert--dark">Alert content</div>
+            <div class="alert m alert--light">Alert content</div>
+        </div>
+        <div class="group m">
+            <div><b>Translucent</b></div>
+            <div class="alert m alert__translucent--primary">Alert content</div>
+            <div class="alert m alert__translucent--secondary">Alert content</div>
+            <div class="alert m alert__translucent--warning">Alert content</div>
+            <div class="alert m alert__translucent--danger">Alert content</div>
+            <div class="alert m alert__translucent--info">Alert content</div>
+            <div class="alert m alert__translucent--success">Alert content</div>
+            <div class="alert m alert__translucent--dark">Alert content</div>
+            <div class="alert m alert__translucent--light">Alert content</div>
+        </div>
+    </section>
+    
+    <!-- BADGE -->
+    <section id="Badge" class="container">
+        <h1>Badge</h1>
+        <div class="group m">
+            <div><b>Default</b></div>
+            <span class="badge badge--primary">Primary</span> 
+            <span class="badge badge--secondary">Secondary</span> 
+            <span class="badge badge--warning">Warning</span> 
+            <span class="badge badge--danger">Danger</span> 
+            <span class="badge badge--info">Info</span>  
+            <span class="badge badge--success">Success</span> 
+            <span class="badge badge--dark">Dark</span> 
+            <span class="badge badge--light">Light</span> 
+        </div>
+        <div class="group m">
+            <div><b>Translucent</b></div>
+            <span class="badge badge__translucent--primary">Primary</span> 
+            <span class="badge badge__translucent--secondary">Secondary</span> 
+            <span class="badge badge__translucent--warning">Warning</span> 
+            <span class="badge badge__translucent--danger">Danger</span> 
+            <span class="badge badge__translucent--info">Info</span>  
+            <span class="badge badge__translucent--success">Success</span> 
+            <span class="badge badge__translucent--dark">Dark</span> 
+            <span class="badge badge__translucent--light">Light</span> 
+        </div>
+    </section>
+    
+    <!-- BREADCRUMB -->
+    <section id="Breadcrumb" class="container">
+        <h1>Breadcrumb</h1>
+        <div class="group m">
+            <div><b>Default</b></div>
+            <nav>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item">Home</li>
+                    <li class="breadcrumb__item">Home</li>
+                    <li class="breadcrumb__item">Home</li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    
+    <!-- BUTTON -->
+    <section id="Button" class="container">
+        <h1>Buttons</h1>
+        <div class="group m" id="ButtonDefault">
+            <div><b>Default</b></div>
+            <button type="button" class="m button button--primary">Primary</button>
+            <button type="button" class="m button button--secondary">Secondary</button>
+            <button type="button" class="m button button--warning">Warning</button>
+            <button type="button" class="m button button--danger">Danger</button>
+            <button type="button" class="m button button--info">Info</button>
+            <button type="button" class="m button button--success">Success</button>
+            <button type="button" class="m button button--dark">Dark</button>
+            <button type="button" class="m button button--light">Light</button>
+            <button type="button" class="m button button--transparent">Transparent</button>
+        </div>
+        <div class="group m" id="ButtonOutline">
+            <div><b>Outline</b></div>
+            <button type="button" class="m button button__outline--primary">Primary</button>
+            <button type="button" class="m button button__outline--secondary">Secondary</button>
+            <button type="button" class="m button button__outline--warning">Warning</button>
+            <button type="button" class="m button button__outline--danger">Danger</button>
+            <button type="button" class="m button button__outline--info">Info</button>
+            <button type="button" class="m button button__outline--success">Success</button>
+            <button type="button" class="m button button__outline--dark">Dark</button>
+            <button type="button" class="m button button__outline--light">Light</button>
+        </div>
+        <div class="group m" id="ButtonTranslucent">
+            <div><b>Translucent</b></div>
+            <button type="button" class="m button button__translucent--primary">Primary</button>
+            <button type="button" class="m button button__translucent--secondary">Secondary</button>
+            <button type="button" class="m button button__translucent--warning">Warning</button>
+            <button type="button" class="m button button__translucent--danger">Danger</button>
+            <button type="button" class="m button button__translucent--info">Info</button>
+            <button type="button" class="m button button__translucent--success">Success</button>
+            <button type="button" class="m button button__translucent--dark">Dark</button>
+            <button type="button" class="m button button__translucent--light">Light</button>
+        </div>
+        <div class="group m" id="ButtonShadow">
+            <div><b>Shadow</b></div>
+            <button type="button" class="m button button__shadow--primary">Primary</button>
+            <button type="button" class="m button button__shadow--secondary">Secondary</button>
+            <button type="button" class="m button button__shadow--warning">Warning</button>
+            <button type="button" class="m button button__shadow--danger">Danger</button>
+            <button type="button" class="m button button__shadow--info">Info</button>
+            <button type="button" class="m button button__shadow--success">Success</button>
+            <button type="button" class="m button button__shadow--dark">Dark</button>
+            <button type="button" class="m button button__shadow--light">Light</button>
+        </div>
+    </section>
+
+    <!-- BUTTON SIZE -->
+    <section id="Button" class="container">
+        <h1>Button Sizes</h1>
+        <div class="group m">
+            <div><b>Large</b></div>
+            <button type="button" class="m button button--primary m button--lg">Large buttom</button>
+        </div>
+        <div class="group m">
+            <div><b>Medium (default)</b></div>
+            <button type="button" class="m button button--primary m">Medium button</button>
+        </div>
+        <div class="group m">
+            <div><b>Small</b></div>
+            <button type="button" class="m button button--primary m button--sm">Small button</button>
+        </div>
+    </section>
+
+    <!-- BUTTON GROUP -->
+    <section id="ButtonGroup" class="container">
+        <h1>Button Group</h1>
+        <div class="group m" id="ButtonDefault">
+            <div><b>Default</b></div>
+            <div class="button-group m">
+                <button type="button" class="button button--primary">Primary</button>
+                <button type="button" class="button button--secondary">Secondary</button>
+                <button type="button" class="button button--warning">Warning</button>
+                <button type="button" class="button button--danger">Danger</button>
+                <button type="button" class="button button--info">Info</button>
+                <button type="button" class="button button--success">Success</button>
+                <button type="button" class="button button--dark">Dark</button>
+                <button type="button" class="button button--light">Light</button>
+            </div>
+        </div>
+        <div class="group m" id="ButtonOutline">
+            <div><b>Outline</b></div>
+            <div class="button-group m">
+                <button type="button" class="button button__outline--primary">Primary</button>
+                <button type="button" class="button button__outline--secondary">Secondary</button>
+                <button type="button" class="button button__outline--warning">Warning</button>
+                <button type="button" class="button button__outline--danger">Danger</button>
+                <button type="button" class="button button__outline--info">Info</button>
+                <button type="button" class="button button__outline--success">Success</button>
+                <button type="button" class="button button__outline--dark">Dark</button>
+                <button type="button" class="button button__outline--light">Light</button>
+            </div>
+        </div>
+        <div class="group m" id="ButtonTranslucent">
+            <div><b>Translucent</b></div>
+            <div class="button-group m">
+                <button type="button" class="button button__translucent--primary">Primary</button>
+                <button type="button" class="button button__translucent--secondary">Secondary</button>
+                <button type="button" class="button button__translucent--warning">Warning</button>
+                <button type="button" class="button button__translucent--danger">Danger</button>
+                <button type="button" class="button button__translucent--info">Info</button>
+                <button type="button" class="button button__translucent--success">Success</button>
+                <button type="button" class="button button__translucent--dark">Dark</button>
+                <button type="button" class="button button__translucent--light">Light</button>
+            </div>
+        </div>
+        <div class="group m" id="ButtonShadow">
+            <div><b>Shadow</b></div>
+            <div class="button-group m">
+                <button type="button" class="button button__shadow--primary">Primary</button>
+                <button type="button" class="button button__shadow--secondary">Secondary</button>
+                <button type="button" class="button button__shadow--warning">Warning</button>
+                <button type="button" class="button button__shadow--danger">Danger</button>
+                <button type="button" class="button button__shadow--info">Info</button>
+                <button type="button" class="button button__shadow--success">Success</button>
+                <button type="button" class="button button__shadow--dark">Dark</button>
+                <button type="button" class="button button__shadow--light">Light</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARD -->
+    
+    <section id="Card" class="container">
+        <h1>Card</h1>
+        <div class="group m">
+            <div><b>Default</b></div>
+            <div class="card m">
+                <div class="card__header">
+                    Card Header
+                </div>
+                <div class="card__body">
+                    <div class="card__title">Title</div>
+                    <div class="car__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eius, error incidunt sapiente asperiores minus rerum quo ut sunt? Deleniti dolorem natus sed facere praesentium facilis earum reiciendis, numquam amet!</div>
+                </div>
+                <div class="card__footer">
+                    Card Footer
+                </div>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Border</b></div>
+            <div class="card card--border m">
+                <div class="card__header">
+                    Card Header
+                </div>
+                <div class="card__body">
+                    <div class="card__title">Title</div>
+                    <div class="car__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eius, error incidunt sapiente asperiores minus rerum quo ut sunt? Deleniti dolorem natus sed facere praesentium facilis earum reiciendis, numquam amet!</div>
+                </div>
+                <div class="card__footer">
+                    Card Footer
+                </div>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Shadow</b></div>
+            <div class="card card--shadow m">
+                <div class="card__header">
+                    Card Header
+                </div>
+                <div class="card__body">
+                    <div class="card__title">Title</div>
+                    <div class="car__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eius, error incidunt sapiente asperiores minus rerum quo ut sunt? Deleniti dolorem natus sed facere praesentium facilis earum reiciendis, numquam amet!</div>
+                </div>
+                <div class="card__footer">
+                    Card Footer
+                </div>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Image top</b></div>
+            <div class="card card--border m">
+                <svg class="card__img--top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                <div class="card__body">
+                    <div class="card__title">Title</div>
+                    <div class="car__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eius, error incidunt sapiente asperiores minus rerum quo ut sunt? Deleniti dolorem natus sed facere praesentium facilis earum reiciendis, numquam amet!</div>
+                </div>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Image bottom</b></div>
+            <div class="card card--border m">
+                <div class="card__body">
+                    <div class="card__title">Title</div>
+                    <div class="car__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eius, error incidunt sapiente asperiores minus rerum quo ut sunt? Deleniti dolorem natus sed facere praesentium facilis earum reiciendis, numquam amet!</div>
+                </div>
+                <svg class="card__img--bottom" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- DROPDOWN -->
+    <section id="Dropdown" class="container">
+        <h1>Dropdown</h1>
+        <div class="group m">
+            <div><b>Direction</b></div>
+            <div class="dropdown m">
+                <button type="button" class="button button--primary" data-toggle="dropdown">Dropdown right</button>
+                <ul class="dropdown__menu dropdown__menu--right">
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                </ul>
+            </div>
+            <div class="dropdown m">
+                <button type="button" class="button button--secondary" data-toggle="dropdown">Dropdown left</button>
+                <ul class="dropdown__menu">
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                </ul>
+            </div>
+            <div class="dropdown m">
+                <button type="button" class="button button--info" data-toggle="dropdown">Drop-Top</button>
+                <ul class="dropdown__menu dropdown__menu--top">
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Static</b></div>
+            <div class="dropdown dropdown--static m">
+                <button type="button" class="button button--primary" data-toggle="dropdown">Static Dropdown</button>
+                <ul class="dropdown__menu">
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Divider</b></div>
+            <div class="dropdown m">
+                <button type="button" class="button button--primary" data-toggle="dropdown">Dropdown divider</button>
+                <ul class="dropdown__menu">
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <li class="dropdown__item">Dropdown item</li>
+                    <div class="dropdown__divider"></div>
+                    <li class="dropdown__item">Dropdown item</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIST GROUP -->
+    <section id="Listgroup" class="container">
+        <h1>List group</h1>
+        <div class="group m">
+            <div><b>Default</b></div>
+            <div class="list-group">
+                <div class="list-group__item">List group item</div>
+                <div class="list-group__item">List group item</div>
+                <div class="list-group__item">List group item</div>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Border</b></div>
+            <div class="list-group list-group--border">
+                <div class="list-group__item">List group item</div>
+                <div class="list-group__item">List group item</div>
+                <div class="list-group__item">List group item</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGINATION -->
+    <section id="Pagination" class="container">
+        <h1>Pagination</h1>
+        <div class="group m">
+            <div><b>Default</b></div>
+            <div class="pagination m pagination--primary">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--secondary">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--warning">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--danger">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--info">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--success">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--dark">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--light">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Pills</b></div>
+            <div class="pagination pagination--primary pagination--rounded-pill">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+        </div>
+        <div class="group m">
+            <div><b>Translucent</b></div>
+            <div class="pagination m pagination--translucent-primary">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--translucent-secondary">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--translucent-warning">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--translucent-danger">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--translucent-info">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--translucent-success">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--translucent-dark">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+            <div class="pagination m pagination--translucent-light">
+                <a class="pagination__item" href="#">Previous</a>
+                <a class="pagination__item" href="#">1</a>
+                <a class="pagination__item" href="#">2</a>
+                <a class="pagination__item" href="#">3</a>
+                <a class="pagination__item" href="#">Next</a>
+            </div>
+        </div>
+    </section>
+    <script src="docs/docs.js"></script>
+    <script src="dist/js/base.js"></script>
+    <script src="dist/js/dropdown.js"></script>
+</body>
+</html>

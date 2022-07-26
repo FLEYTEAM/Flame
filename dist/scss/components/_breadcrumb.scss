@@ -1,0 +1,26 @@
+:root[data-theme="light"] { 
+    .breadcrumb {
+        --breadcrumb-item-divider-color: #{$gray-300};
+    }
+}
+:root[data-theme="dark"] { 
+    .breadcrumb {
+        --breadcrumb-item-divider-color: #{$gray-500};
+    }
+}
+
+.breadcrumb {
+
+    display: flex;
+    flex-direction: row;
+
+    .breadcrumb__item {
+        list-style-type: none;
+    }
+
+    .breadcrumb__item + .breadcrumb__item::before {
+        margin: 0 1rem;
+        content: "/";
+        color: var(--breadcrumb-item-divider-color);
+    }
+}

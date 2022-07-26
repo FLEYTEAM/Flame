@@ -1,0 +1,29 @@
+.alert {
+	
+	--alert-vertical-spacing: .75rem;
+	--alert-horizontal-spacing: 1.25rem;
+
+	padding: var(--alert-vertical-spacing) var(--alert-horizontal-spacing);
+	border-width: 0;
+	border-radius: var(--border-radius);
+	font-size: var(--font-size);
+
+	@each $theme, $color in $theme-colors {
+
+		// Default Alert
+		&.alert--#{$theme} {
+			background-color: var(--#{$theme});
+			@if $theme != "light" {
+				color: $white;
+			} @else {
+				color: $black;
+			}
+		}
+
+		// Translucent Alert
+		&.alert__translucent--#{$theme} {
+			background-color: rgba($color, .2);
+			color: var(--#{$theme});
+		}
+	}
+}

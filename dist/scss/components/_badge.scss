@@ -1,0 +1,40 @@
+.badge {
+	
+	--badge-vertical-spacing: .35em;
+	--badge-horizontal-spacing: .65em;
+	
+	--badge-font-size: .75em;
+	--badge-font-weight: 600;
+
+	--badge-line-height: 1;
+
+	display: inline-block;
+	vertical-align: baseline;
+	white-space: nowrap;
+	text-align: center;
+	font-size: var(--badge-font-size);
+	font-weight: var(--badge-font-weight);
+	padding: var(--badge-vertical-spacing ) var(--badge-horizontal-spacing);
+	border-radius: var(--border-radius);
+
+	@each $theme, $color in $theme-colors {
+
+		// Default Badge
+		&.badge--#{$theme} {
+			background-color: var(--#{$theme});
+			@if $theme != "light" {
+				color: $white;
+			} @else {
+				color: $black;
+			}
+		}
+
+		// Translucent Badge
+		&.badge__translucent--#{$theme} {
+			background-color: rgba($color, .2);
+			color: var(--#{$theme});
+		}
+		
+	}
+
+}

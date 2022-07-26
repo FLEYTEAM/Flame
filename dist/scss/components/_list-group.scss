@@ -1,0 +1,27 @@
+.list-group {
+    
+    --list-group-vertical-spacing: .75rem;
+    --list-group-horizontal-spacing: 1rem;
+
+    --list-group-border-width: 1px;
+    --list-group-border-style: solid;
+    --list-group-border-color: #{$gray-200};
+
+    border-radius: var(--border-radius);
+
+    &.list-group--border, &.list-group--flush {
+       
+        .list-group__item:nth-child(n+2) {
+            border-top: var(--list-group-border-width) var(--list-group-border-style) var(--list-group-border-color);
+        }
+
+    }
+
+    &.list-group--border {
+        border: var(--list-group-border-width) var(--list-group-border-style) var(--list-group-border-color);
+    }
+
+    .list-group__item {
+        padding: var(--list-group-vertical-spacing) var(--list-group-horizontal-spacing);
+    }
+}

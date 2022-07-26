@@ -1,0 +1,117 @@
+$black: #000;
+$white: #fff;
+
+// Grays
+$gray-100: #f2f2f2 !default;
+$gray-200: #d8d8d8 !default;
+$gray-300: #bfbfbf !default;
+$gray-400: #a5a5a5 !default;
+$gray-500: #727272 !default;
+$gray-600: #595959 !default;
+$gray-700: #3f3f3f !default;
+$gray-800: #262626 !default;
+$gray-900: #0c0c0c !default;
+
+// Primary
+$primary-100: #fdfbff !default;
+$primary-200: #ecdcff !default;
+$primary-300: #dcbeff !default;
+$primary-400: #cc9fff !default;
+$primary-500: #ab62ff !default;
+$primary-600: #9b43ff !default;
+$primary-700: #8a25ff !default;
+$primary-800: #7a06ff !default;
+$primary-900: #6b00e7 !default;
+
+$secondary-100: #ffffff !default;
+$secondary-200: #fff3fd !default;
+$secondary-300: #ffcff7 !default;
+$secondary-400: #ffabf1 !default;
+$secondary-500: #ff64e5 !default;
+$secondary-600: #ff40df !default;
+$secondary-700: #ff1dd9 !default;
+$secondary-800: #f800ce !default;
+$secondary-900: #d400b1 !default;
+
+$warning-100: #fffaec !default;
+$warning-200: #ffefbf !default;
+$warning-300: #ffe391 !default;
+$warning-400: #ffd863 !default;
+$warning-500: #ffc107 !default;
+$warning-600: #d8a200 !default;
+$warning-700: #aa8000 !default;
+$warning-800: #7c5d00 !default;
+$warning-900: #4e3b00 !default;
+
+$danger-100: #ffd6da !default;
+$danger-200: #ffa3ac !default;
+$danger-300: #ff707e !default;
+$danger-400: #ff3d50 !default;
+$danger-500: #d60015 !default;
+$danger-600: #a30010 !default;
+$danger-700: #70000b !default;
+$danger-800: #3d0006 !default;
+$danger-900: #0a0001 !default;
+
+$info-100: #fdffff !default;
+$info-200: #cdf4fc !default;
+$info-300: #9ceafa !default;
+$info-400: #6ce0f7 !default;
+$info-500: #0dcaf0 !default;
+$info-600: #0aa1c0 !default;
+$info-700: #08798f !default;
+$info-800: #05505f !default;
+$info-900: #03272e !default;
+
+$success-100: #ecfcf7 !default;
+$success-200: #c0f5e5 !default;
+$success-300: #94eed3 !default;
+$success-400: #68e7c1 !default;
+$success-500: #20c997 !default;
+$success-600: #199d76 !default;
+$success-700: #127155 !default;
+$success-800: #0b4534 !default;
+$success-900: #041913 !default;
+
+// Colors
+$primary: 	$primary-500 !default;
+$secondary: $secondary-500 !default;
+$warning: 	$warning-500 !default;
+$danger: 	$danger-500 !default;
+$info: 		$info-500 !default;
+$success: 	$success-500 !default;
+
+// ---- Theme colors ----
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"warning": $warning,
+	"danger": $danger,
+	"info": $info,
+	"success": $success,
+	"dark": $gray-800,
+	"light": $gray-100
+) !default;
+
+$themes-darker: (
+	"primary": $primary-700,
+	"secondary": $secondary-800,
+	"warning": $warning-600,
+	"danger": $danger-600,
+	"info": $info-600,
+	"success": $success-600,
+	"dark": $black,
+	"light": $gray-200
+) !default;
+
+$themes-lighter: (
+	"primary": $primary-400,
+	"secondary": $secondary-400,
+	"warning": $warning-400,
+	"danger": $danger-400,
+	"info": $info-400,
+	"success": $success-400,
+	"dark": $gray-700,
+	"light": $white
+) !default;
+// ---- End Theme colors ----

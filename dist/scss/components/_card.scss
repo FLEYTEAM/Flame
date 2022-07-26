@@ -1,0 +1,92 @@
+// Theme customize
+:root[data-theme="light"] { 
+    .card {
+        --card-background-color: var(--background-color);
+        --card-border-color: #{$gray-100};
+        --card-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        --card-header-background: rgba(0, 0, 0, .02);
+    }
+}
+:root[data-theme="dark"] { 
+    .card {
+        --card-background-color: var(--background-color);
+        --card-border-color: #{$gray-600};
+        --card-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+        --card-header-background: rgba(255, 255, 255, .02);
+    }
+}
+
+.card {
+
+    --card-vertical-spacing: .75rem;
+    --card-horizontal-spacing: 1rem;
+
+    // Card border
+    --card-border-width: 1px;
+    --card-border-style: solid;
+    --card-border-radius: var(--border-radius);
+
+    // Card shadow
+    --card-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background-color);
+
+    &.card--border {
+        border: var(--card-border-width) var(--card-border-style) var(--card-border-color);
+    }
+
+    &.card--shadow {
+        box-shadow: var(--card-shadow);
+    }
+
+    .card__header, .card__footer {
+        padding: var(--card-vertical-spacing) var(--card-horizontal-spacing);
+        background-color: var(--card-header-background);
+    }
+
+    .card__header {
+        border-top-left-radius: var(--card-border-radius);
+        border-top-right-radius: var(--card-border-radius);
+    }
+
+    .card__footer {
+        border-bottom-left-radius: var(--card-border-radius);
+        border-bottom-right-radius: var(--card-border-radius);
+    }
+
+    .card__body {
+
+        --card-title-vertical-spacing: .5rem;
+
+        border-bottom-left-radius: var(--card-border-radius);
+        border-bottom-right-radius: var(--card-border-radius);
+        padding: var(--card-vertical-spacing) var(--card-horizontal-spacing);
+
+        .card__title {
+            padding-top: var(--card-title-vertical-spacing);
+            padding-bottom: var(--card-title-vertical-spacing);
+        }
+
+    }
+
+    .card__img--top {
+        border-top-left-radius: var(--card-border-radius);
+        border-top-right-radius: var(--card-border-radius);
+    }
+
+    .card__img--bottom {
+        border-bottom-left-radius: var(--card-border-radius);
+        border-bottom-right-radius: var(--card-border-radius);
+    }
+
+    .card__img--left {
+        border-bottom-left-radius: var(--card-border-radius);
+        border-top-left-radius: var(--card-border-radius);
+    }
+
+}
