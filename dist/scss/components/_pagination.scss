@@ -20,21 +20,24 @@
 	--pagination-border-style: solid;
 	--pagination-border-radius: .25rem;	
 	--pagination-border-rounded-circle: 5rem;
-	--pagination-items-spacing: .5rem; 
+	--pagination-items-spacing: .5rem;
+
+    --pagination-transition: all var(--transition);
 
 	@each $theme, $color in $theme-colors {
 
 		&.pagination--#{$theme} {
 			--pagination-background-color: transparent;
 			@if $theme != "light" {
-				--pagination-hover-color: #{$color};
+                --pagination-active-color: #{$white};
 			} @else {
-				--pagination-hover-color: #{$black};
+                --pagination-active-color: #{$black};
 			}
+            --pagination-hover-color: #{$color};
 			--pagination-hover-background-color: #{rgba($color, .15)};
 			--pagination-hover-border-color: #{$color};
-            --pagigation-active-background-color: #{$color};
-            --pagigation-active-border-color: #{$color};
+            --pagination-active-background-color: #{$color};
+            --pagination-active-border-color: #{$color};
 		}
 
 		&.pagination--translucent-#{$theme} {
@@ -48,6 +51,9 @@
 			}
 			--pagination-hover-background-color: #{rgba($color, .2)};
 			--pagination-hover-border-color: #{$color};
+            --pagination-active-background-color: #{$color};
+            --pagination-active-border-color: #{$color};
+
 			--pagination-border-width: 0;
 		}
 	}
@@ -81,7 +87,7 @@
 		}
 
         &.active {
-            background-color: var(--pagigation-active-background-color);
+            background-color: var(--pagination-active-background-color);
 			color: var(--pagination-active-color); 
 			border-color: var(--pagination-active-border-color);
         }
@@ -94,6 +100,12 @@
 		.pagination__item {
 			border-radius: var(--pagination-border-rounded-circle) ;
 		}
+
+        &.active {
+            background-color: var(--pagination-active-background-color);
+			color: var(--pagination-active-color); 
+			border-color: var(--pagination-active-border-color);
+        }
 
 	}
 }
