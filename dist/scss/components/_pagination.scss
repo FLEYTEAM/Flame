@@ -33,17 +33,20 @@
 			}
 			--pagination-hover-background-color: #{rgba($color, .15)};
 			--pagination-hover-border-color: #{$color};
+            --pagigation-active-background-color: #{$color};
+            --pagigation-active-border-color: #{$color};
 		}
 
 		&.pagination--translucent-#{$theme} {
-			--pagination-background-color: #{rgba($color, .2)};
+			--pagination-background-color: #{rgba($color, .1)};
 			--pagination-color: #{$color};
+            --pagination-hover-color: #{$color};
 			@if $theme != "light" {
-				--pagination-hover-color: #{$white};
+				--pagination-active-color: #{$white};
 			} @else {
-				--pagination-hover-color: #{$black};
+				--pagination-active-color: #{$black};
 			}
-			--pagination-hover-background-color: #{$color};
+			--pagination-hover-background-color: #{rgba($color, .2)};
 			--pagination-hover-border-color: #{$color};
 			--pagination-border-width: 0;
 		}
@@ -51,6 +54,11 @@
 
 	display: inline-flex;
 	position: relative;
+    padding: 0;
+
+    >li {
+        list-style-type: none;
+    }
 
 	.pagination__item { 
 		
@@ -71,6 +79,12 @@
 			color: var(--pagination-hover-color); 
 			border-color: var(--pagination-hover-border-color);
 		}
+
+        &.active {
+            background-color: var(--pagigation-active-background-color);
+			color: var(--pagination-active-color); 
+			border-color: var(--pagination-active-border-color);
+        }
 
 	}
 
