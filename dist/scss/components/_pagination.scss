@@ -1,68 +1,98 @@
-.pagination {
+// Theme customize
+:root[data-theme="light"] { 
+	.pagination {
+		--pagination-border-color: #{$gray-200};
+	}
+}
+:root[data-theme="dark"] { 
+	.pagination {
+		--pagination-border-color: #{$gray-700};
+	}
+}
 
+.pagination {
+	
 	--pagination-vertical-spacing: .25rem;
 	--pagination-horizontal-spacing: .75rem;
-
+	
+	--pagination-color: --text-color;
 	--pagination-border-width: 1px;
 	--pagination-border-style: solid;
-	--pagination-border-color: #{$gray-100};
-	--pagination-border-circle: 50%;
-	--color-hover: #{$primary}; // -> --pagination-hover-color, color code -> variable
+	--pagination-border-radius: .25rem;	
+	--pagination-border-rounded-circle: 5rem;
+	--pagination-items-spacing: .5rem; 
+
+	@each $theme, $color in $theme-colors {
+
+		&.pagination--#{$theme} {
+			--pagination-background-color: transparent;
+			@if $theme != "light" {
+				--pagination-hover-color: #{$color};
+			} @else {
+				--pagination-hover-color: #{$black};
+			}
+			--pagination-hover-background-color: #{rgba($color, .15)};
+			--pagination-hover-border-color: #{$color};
+            --pagigation-active-background-color: #{$color};
+            --pagigation-active-border-color: #{$color};
+		}
+
+		&.pagination--translucent-#{$theme} {
+			--pagination-background-color: #{rgba($color, .1)};
+			--pagination-color: #{$color};
+            --pagination-hover-color: #{$color};
+			@if $theme != "light" {
+				--pagination-active-color: #{$white};
+			} @else {
+				--pagination-active-color: #{$black};
+			}
+			--pagination-hover-background-color: #{rgba($color, .2)};
+			--pagination-hover-border-color: #{$color};
+			--pagination-border-width: 0;
+		}
+	}
 
 	display: inline-flex;
 	position: relative;
+    padding: 0;
 
-	&.pagination--border, &.pagination--flush{
-		.page__item { // -> .pagination__item
-			&:nth-child(n+2){
-				border: var(--pagination-border-width) var(--pagination-border-style) var(--pagination-border-color);
-				border-right: 0;
-			}
-			&:first-child {
-				border-top-left-radius: var(--border-radius);
-				border-bottom-left-radius: var(--border-radius);
-				border: var(--pagination-border-width) var(--pagination-border-style) var(--pagination-border-color);
-				border-right: 0;
-			}
-			&:last-child {
-				border-top-right-radius: var(--border-radius);
-				border-bottom-right-radius: var(--border-radius);
-				border: var(--pagination-border-width) var(--pagination-border-style) var(--pagination-border-color);
-			}
-		}
-		.page__item:hover {
-			background-color: var(--pagination-border-color); // Don't use other variable
-		}
-	}
-	.page__item {
+    >li {
+        list-style-type: none;
+    }
+
+	.pagination__item { 
+		
 		text-decoration: none;
-		color: var(--text-color); 
+		background-color: var(--pagination-background-color);
+		color: var(--pagination-color); 
 		padding: var(--pagination-vertical-spacing) var(--pagination-horizontal-spacing);
+		margin-left: var(--pagination-items-spacing);
+		border: var(--pagination-border-width) var(--pagination-border-style) var(--pagination-border-color);
+		border-radius: var(--pagination-border-radius);
+		
+		&:first-child {
+			margin-left: 0; 
+		}
+
+		&:hover {
+			background-color: var(--pagination-hover-background-color);
+			color: var(--pagination-hover-color); 
+			border-color: var(--pagination-hover-border-color);
+		}
+
+        &.active {
+            background-color: var(--pagigation-active-background-color);
+			color: var(--pagination-active-color); 
+			border-color: var(--pagination-active-border-color);
+        }
+
 	}
-	.page__item:hover {
-		color: var(--color-hover);
-	}
-	&.pagination--circle {
-		.page__item {
-			margin: 0 .5rem;
-			&:nth-child(n+2){
-				border-radius: 50%; // Use px instead
-			}
-			&:nth-child(n+2):hover {
-				background-color: var(--color-hover);
-				color:#fff; // Use variable
-			}
-			&:first-child {
-				border-right: 0;
-			}
-			&:last-child {
-				border :0;	
-				border-radius: 0;
-			}
-			&:last-child:hover {
-				background-color: inherit;
-				color: var(--color-hover);
-			}
+
+
+	&.pagination--rounded-pill {
+		
+		.pagination__item {
+			border-radius: var(--pagination-border-rounded-circle) ;
 		}
 
 	}
