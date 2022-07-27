@@ -15,7 +15,9 @@
 
 @each $breakpoint, $size in $breakpoints {
     @if($breakpoint != 'xs') {
+
         @media only screen and (min-width: $size) {
+
             @each $name, $value in $padding {
                 .p__#{$breakpoint}--#{$name} {
                     padding: $value;
@@ -30,6 +32,8 @@
                 }
             
             }
+            
         }
+
     }
 }
