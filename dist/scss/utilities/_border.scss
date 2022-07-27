@@ -1,0 +1,28 @@
+
+.border {
+	border: 1 solid #{$gray-200};
+}
+@each $direction, $type in $directions {
+	@each $name, $value in $border-widths {
+		.border--#{$direction}--#{$name} {
+			@each $var in $type {
+				border-#{$var}-width: #{$value} ;
+			}
+		}
+	}
+}
+
+@each $name, $style in $border-styles {
+	.border--#{$name} {
+		@each $var in $style {
+			border-style: #{$var};
+		}
+	}
+}
+@each $color, $value in $theme-colors {
+	.border--#{$color} {
+
+		border-color: #{$value} ;
+	}
+} 
+

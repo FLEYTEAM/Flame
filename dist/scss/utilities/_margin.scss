@@ -1,0 +1,36 @@
+@each $name, $value in $margin {
+	.m--#{$name} {
+		margin: $value;
+	}
+
+	@each $direction, $type in $directions {
+		.m#{$direction}--#{$name} {
+			@each $var in $type {
+				margin--#{$var}: $value;
+			}
+		}
+	}
+}
+@each $breakpoint, $size in $breakpoints {
+	@if($breakpoint != 'xs') {
+
+		@media only screen and (min-width: $size) {
+			
+			@each $name, $value in $margin {
+				.m__#{$breakpoint}--#{$name} {
+					margin: $value;
+				}
+
+				@each $direction, $type in $directions {
+					.m#{$direction}__#{$breakpoint}--#{$name} {
+						@each $var in $type {
+							margin-#{$var}: $value;
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+}
