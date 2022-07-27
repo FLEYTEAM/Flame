@@ -20,6 +20,10 @@
     &.list-group--border {
         border: var(--list-group-border-width) var(--list-group-border-style) var(--list-group-border-color);
     }
+    &.list-group--flush {
+        border-width: 0;
+        border-radius: 0;
+    }
 
     .list-group__item {
         padding: var(--list-group-vertical-spacing) var(--list-group-horizontal-spacing);
