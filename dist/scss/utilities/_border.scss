@@ -1,17 +1,26 @@
-
 .border {
-	border: 1 solid #{$gray-200};
+	border: 1px solid #{$gray-200};
 }
-@each $direction, $type in $directions {
-	@each $name, $value in $border-widths {
-		.border--#{$direction}--#{$name} {
-			@each $var in $type {
-				border-#{$var}-width: #{$value} ;
-				border-style: solid;
-			}
-		}
-	}
+
+@each $name, $value in $border-widths {
+
+    .border--#{$name} {
+        border: #{$value} solid #{$gray-200};
+    }
+
+    @each $direction, $type in $directions {
+        @each $name, $value in $border-widths {
+            .border__#{$direction}--#{$name} {
+                @each $var in $type {
+                    border-#{$var}-width: #{$value} ;
+                    border-style: solid;
+                }
+            }
+        }
+    }
+
 }
+
 @each $color, $value in $theme-colors {
 	.border--#{$color} {
 		border-color: #{$value} ;
