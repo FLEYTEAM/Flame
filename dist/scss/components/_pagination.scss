@@ -75,6 +75,7 @@
 		margin-left: var(--pagination-items-spacing);
 		border: var(--pagination-border-width) var(--pagination-border-style) var(--pagination-border-color);
 		border-radius: var(--pagination-border-radius);
+        transition: var(--pagination-transition);
 		
 		&:first-child {
 			margin-left: 0; 

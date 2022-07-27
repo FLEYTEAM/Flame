@@ -1,3 +1,11 @@
+// Theme customize
+:root[data-theme="light"] { 
+    --list-group-border-color: #{$gray-200};
+}
+:root[data-theme="dark"] { 
+    --list-group-border-color: #{$gray-700};
+}
+
 .list-group {
     
     --list-group-vertical-spacing: .75rem;
@@ -5,7 +13,6 @@
 
     --list-group-border-width: 1px;
     --list-group-border-style: solid;
-    --list-group-border-color: #{$gray-200};
 
     border-radius: var(--border-radius);
 
