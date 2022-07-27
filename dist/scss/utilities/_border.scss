@@ -7,21 +7,13 @@
 		.border--#{$direction}--#{$name} {
 			@each $var in $type {
 				border-#{$var}-width: #{$value} ;
+				border-style: solid;
 			}
-		}
-	}
-}
-
-@each $name, $style in $border-styles {
-	.border--#{$name} {
-		@each $var in $style {
-			border-style: #{$var};
 		}
 	}
 }
 @each $color, $value in $theme-colors {
 	.border--#{$color} {
-
 		border-color: #{$value} ;
 	}
 } 

@@ -86,12 +86,7 @@ $directions: (
     x: [left right],
     y: [top bottom]
 ) !default;
-$border-styles: (
-    solid: solid,
-    dotted: dotted,
-    double: double,
-    dashed: dashed
-)!default;
+
 $border-widths: ( 
     0: 0px,
     1: 1px,
@@ -99,5 +94,15 @@ $border-widths: (
     3: 3px,
     4: 4px,
     5: 5px
-)!default;
+) !default;
+
+$rounded: (
+    1: .375rem,
+    2: .25rem,
+    3: .5rem,
+    4: 1rem,
+    5: 2rem,
+    6: 50rem
+) !default;
+
 // ---- End utility config ----

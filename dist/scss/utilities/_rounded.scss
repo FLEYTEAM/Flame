@@ -1,0 +1,5 @@
+@each $style, $value in $rounded {
+	.rounded--#{$style} {
+		border-radius: #{$value}; 
+	}
+}
