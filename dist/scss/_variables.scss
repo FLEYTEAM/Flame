@@ -105,4 +105,16 @@ $rounded: (
     6: 50rem
 ) !default;
 
+$display: (
+    none: none,
+    inline: inline,
+    inline-block: inline-block,
+    block: block,
+    grid: grid,
+    table: table,
+    table-cell: table-cell,
+    table-row:table-row,
+    flex: flex,
+    inline-flex: inline-flex
+) !default;
 // ---- End utility config ----
