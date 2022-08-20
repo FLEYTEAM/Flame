@@ -1,18 +1,20 @@
 .border {
-	border: 1px solid #{$gray-200};
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray-200;
 }
 
 @each $name, $value in $border-widths {
 
     .border--#{$name} {
-        border: #{$value} solid #{$gray-200};
+        border: $value solid $gray-200;
     }
 
     @each $direction, $type in $directions {
         @each $name, $value in $border-widths {
             .border__#{$direction}--#{$name} {
                 @each $var in $type {
-                    border-#{$var}-width: #{$value} ;
+                    border-#{$var}-width: $value ;
                     border-style: solid;
                 }
             }
