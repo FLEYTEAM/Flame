@@ -50,6 +50,24 @@ $heading-spacing: (
 // ---- End heading typography ----
 
 // ---- Star utility config ----
+$directions: (
+    l: [left],
+    t: [top],
+    b: [bottom],
+    r: [right],
+    x: [left right],
+    y: [top bottom]
+) !default;
+
+$border-widths: ( 
+    0: 0px,
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+) !default;
+
 $opacity: (
     100: 1,
     75: .75,
@@ -78,24 +96,6 @@ $margin: (
     auto: auto
 ) !default;
 
-$directions: (
-    l: [left],
-    t: [top],
-    b: [bottom],
-    r: [right],
-    x: [left right],
-    y: [top bottom]
-) !default;
-
-$border-widths: ( 
-    0: 0px,
-    1: 1px,
-    2: 2px,
-    3: 3px,
-    4: 4px,
-    5: 5px
-) !default;
-
 $rounded: (
     1: .375rem,
     2: .25rem,
@@ -113,8 +113,47 @@ $display: (
     grid: grid,
     table: table,
     table-cell: table-cell,
-    table-row:table-row,
+    table-row: table-row,
     flex: flex,
     inline-flex: inline-flex
+) !default;
+
+$flex: (
+    flex-direction: (
+        row: row,
+        column: column,
+        row-reverse: row-reverse,
+        column-reverse: column-reverse
+    ),
+    flex-wrap: (
+        nowrap: nowrap,
+        wrap: wrap
+    ),
+    justify-content: (
+        normal: normal,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly
+    ),
+    align-content: (
+        normal: normal,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        stretch: stretch
+    ),
+    align-items: (
+        normal,
+        flex-start,
+        flex-end,
+        center,
+        baseline,
+        stretch
+    )
 ) !default;
 // ---- End utility config ----

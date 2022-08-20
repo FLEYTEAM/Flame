@@ -1,0 +1,4 @@
+// Return the string like `__sm`, `__md` and `(NULL)` for responsive classes
+@function get-breakpoint-name($name) {
+    @return if($name == 'xs', '', '__' + $name);
+}

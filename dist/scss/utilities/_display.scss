@@ -1,5 +1,11 @@
-@each $type, $value in $display {
-	.d--#{$type} {
-		display: #{$value};
-	}
+@each $breakpoint, $size in $breakpoints {
+    @media only screen and (min-width: $size) {
+        
+        @each $name, $value in $display {
+            .d#{get-breakpoint-name($breakpoint)}--#{$name} {
+                display: $value;
+            }
+        }
+
+    }
 }
