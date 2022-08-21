@@ -7,16 +7,14 @@
 @each $name, $value in $border-widths {
 
     .border--#{$name} {
-        border: $value solid $gray-200;
+        border-width: $value;
     }
 
     @each $direction, $type in $directions {
-        @each $name, $value in $border-widths {
-            .border__#{$direction}--#{$name} {
-                @each $var in $type {
-                    border-#{$var}-width: $value ;
-                    border-style: solid;
-                }
+        .border__#{$direction}--#{$name} {
+            @each $var in $type {
+                border-#{$var}-width: $value;
+                border-style: solid;
             }
         }
     }
@@ -27,5 +25,13 @@
 	.border--#{$color} {
 		border-color: #{$value} ;
 	}
+
+    @each $direction, $type in $directions {
+        .border__#{$direction}--#{$color} {
+            @each $var in $type {
+                border-color: $value;
+            }
+        }
+    }
 } 
 

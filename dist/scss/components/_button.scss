@@ -53,11 +53,7 @@
         // Default button
         &.button--#{$theme} {
             background-color: var(--#{$theme});
-            @if $theme != "light" {
-                color: $white;
-            } @else {
-                color: $black;
-            }
+            color: #{get-text-color-variable($theme)};
 
             &:hover,
             &:focus {
@@ -66,11 +62,6 @@
             &:active {
                 background-color: var(--#{$theme}-lighter);
             }
-        }
-
-        // Circle button
-        &.button--circle {
-            
         }
         
         // Outline button
@@ -83,11 +74,7 @@
 
             &:hover, &:focus {
                 background-color: var(--#{$theme});
-                @if $theme != "light" {
-                    color: $white;
-                } @else {
-                    color: $black;
-                }
+                color: #{get-text-color-variable($theme)};
             }
             &:active {
                 background-color: var(--#{$theme}-lighter);
@@ -100,11 +87,7 @@
             color: var(--#{$theme});
             &:hover{
                 background-color: var(--#{$theme});
-                @if $theme != "light" {
-                    color: $white;
-                } @else {
-                    color: $black;
-                }
+                color: #{get-text-color-variable($theme)};
             }
             &:active {
                 background-color: var(--#{$theme}-lighter);
@@ -116,11 +99,7 @@
             background-color: var(--#{$theme});
             box-shadow: 0 10px 25px -10px var(--#{$theme}), 
                         0 -5px 10px -10px var(--#{$theme});
-            @if $theme != "light" {
-                color: $white;
-            } @else {
-                color: $black;
-            }
+            color: #{get-text-color-variable($theme)};
             
             &:hover,
             &:focus {

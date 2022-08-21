@@ -28,11 +28,7 @@
 
 		&.pagination--#{$theme} {
 			--pagination-background-color: transparent;
-			@if $theme != "light" {
-                --pagination-active-color: #{$white};
-			} @else {
-                --pagination-active-color: #{$black};
-			}
+            --pagination-active-color: #{get-text-color-variable($theme)};
             --pagination-hover-color: #{$color};
 			--pagination-hover-background-color: #{rgba($color, .15)};
 			--pagination-hover-border-color: #{$color};
@@ -44,11 +40,7 @@
 			--pagination-background-color: #{rgba($color, .1)};
 			--pagination-color: #{$color};
             --pagination-hover-color: #{$color};
-			@if $theme != "light" {
-				--pagination-active-color: #{$white};
-			} @else {
-				--pagination-active-color: #{$black};
-			}
+			--pagination-active-color: #{get-text-color-variable($theme)};
 			--pagination-hover-background-color: #{rgba($color, .2)};
 			--pagination-hover-border-color: #{$color};
             --pagination-active-background-color: #{$color};

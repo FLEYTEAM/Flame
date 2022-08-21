@@ -1,0 +1,7 @@
+@function get-text-color ($theme) {
+    @return if($theme == 'light', 'var(--white)', 'var(--black)');
+}
+
+@function get-text-color-variable ($theme) {
+    @return if($theme == 'light', '--white', '--black');
+}

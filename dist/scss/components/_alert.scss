@@ -13,11 +13,7 @@
 		// Default Alert
 		&.alert--#{$theme} {
 			background-color: var(--#{$theme});
-			@if $theme != "light" {
-				color: $white;
-			} @else {
-				color: $black;
-			}
+			color: #{get-text-color($theme)};
 		}
 
 		// Translucent Alert
