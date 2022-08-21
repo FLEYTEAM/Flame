@@ -49,6 +49,8 @@
 		--#{$theme}-lighter: #{map-get($themes-lighter, $theme)};
 		--#{$theme}-darker: #{map-get($themes-darker, $theme)};
 	}
+    --white: #{$white};
+    --black: #{$black};
 }
 
 // ---- Start light theme ----
