@@ -1,0 +1,13 @@
+@each $breakpoint, $size in $breakpoints {
+    @media only screen and (min-width: $size) {
+        
+        @each $name, $value in $flex {
+            @each $flex-name, $flex-value in $value {
+                .#{$name + get-breakpoint-name($breakpoint)}--#{$flex-name} {
+                    #{$name}: #{$flex-value}
+                }
+            }
+        }
+
+    }
+}

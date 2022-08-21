@@ -1,38 +1,20 @@
-@each $name, $value in $padding {
-    .p--#{$name} {
-        padding: $value;
-    }
-
-    @each $direction, $type in $directions {
-        .p#{$direction}--#{$name} {
-            @each $var in $type {
-                padding-#{$var}: $value;
-            }
-        }
-    }
-}
-
 @each $breakpoint, $size in $breakpoints {
-    @if($breakpoint != 'xs') {
+    @media only screen and (min-width: $size) {
 
-        @media only screen and (min-width: $size) {
-
-            @each $name, $value in $padding {
-                .p__#{$breakpoint}--#{$name} {
-                    padding: $value;
-                }
-            
-                @each $direction, $type in $directions {
-                    .p#{$direction}__#{$breakpoint}--#{$name} {
-                        @each $var in $type {
-                            padding-#{$var}: $value;
-                        }
+        @each $name, $value in $padding {
+            .p#{get-breakpoint-name($breakpoint)}--#{$name} {
+                padding: $value;
+            }
+        
+            @each $direction, $type in $directions {
+                .p#{$direction}__#{$breakpoint}--#{$name} {
+                    @each $var in $type {
+                        padding-#{$var}: $value;
                     }
                 }
-            
             }
-            
+        
         }
-
+        
     }
 }

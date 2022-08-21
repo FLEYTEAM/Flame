@@ -1,0 +1,42 @@
+.text--break {
+    word-wrap: break-word;
+}
+.text--wrap {
+    white-space: normal!important;
+}
+.text--wrap {
+    white-space: nowrap!important;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: lighter;
+}
+
+@each $name, $val in $text-transform {
+    .text--#{$name} {
+        text-transform: $val;
+    }
+}
+
+@each $val in $text-decoration {
+    .text__decoration--#{$val} {
+        text-decoration: $val;
+    }
+}
+
+@each $name, $val in $heading-font-sizes {
+    .text--#{$name} {
+        font-size: $val;
+    }
+}
+
+@each $breakpoint, $size in $breakpoints {
+    @media only screen and (min-width: $size) {
+        @each $var in $text-align {
+            .text#{get-breakpoint-name($breakpoint)}--#{$var} {
+                text-align: $var;
+            }
+        }
+    }
+}

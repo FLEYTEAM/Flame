@@ -2,4 +2,20 @@
 	.rounded--#{$style} {
 		border-radius: #{$value}; 
 	}
+    
+    @each $name, $val in $rounded-directions {
+        .rounded__#{$name}--#{$style} {
+            @each $var in $val {
+                #{$var}: #{$value};
+            } 
+        }
+    }
+}
+
+.rounded--circle {
+    border-radius: 50%;
+}
+
+.rounded--pill {
+    border-radius: 100px;
 }
