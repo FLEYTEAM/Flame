@@ -7,6 +7,8 @@
 @import 'layout/container';
 @import 'layout/grid';
 
+@import 'utilities';
+
 @import 'components/alert';
 @import 'components/badge';
 @import 'components/breadcrumb';
@@ -16,12 +18,3 @@
 @import 'components/dropdown';
 @import 'components/list-group';
 @import 'components/pagination';
-
-@import 'utilities/padding';
-@import 'utilities/margin';
-@import 'utilities/border';
-@import 'utilities/rounded';
-@import 'utilities/background';
-@import 'utilities/color';
-@import 'utilities/display';
-@import 'utilities/flex';

@@ -1,0 +1,19 @@
+.text-break {
+    word-wrap: break-word;
+}
+.text-wrap {
+    white-space: normal!important;
+}
+.text-wrap {
+    white-space: nowrap!important;
+}
+
+@each $breakpoint, $size in $breakpoints {
+    @media only screen and (min-width: $size) {
+        @each $var in $text-align {
+            .text#{get-breakpoint-name($breakpoint)}--#{$var} {
+                text-align: $var;
+            }
+        }
+    }
+}

@@ -156,4 +156,17 @@ $flex: (
         stretch
     )
 ) !default;
+
+$overflow: (
+    visible: visible,
+    invisible: hidden,
+    scroll: scroll,
+    scroll-auto: scroll
+) !default;
+
+$text-align: (
+    left,
+    right,
+    center
+) !default;
 // ---- End utility config ----
