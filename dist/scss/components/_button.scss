@@ -53,7 +53,7 @@
         // Default button
         &.button--#{$theme} {
             background-color: var(--#{$theme});
-            color: #{get-text-color-variable($theme)};
+            color: #{get-text-color($theme)};
 
             &:hover,
             &:focus {
@@ -74,7 +74,7 @@
 
             &:hover, &:focus {
                 background-color: var(--#{$theme});
-                color: #{get-text-color-variable($theme)};
+                color: #{get-text-color($theme)};
             }
             &:active {
                 background-color: var(--#{$theme}-lighter);
@@ -87,7 +87,7 @@
             color: var(--#{$theme});
             &:hover{
                 background-color: var(--#{$theme});
-                color: #{get-text-color-variable($theme)};
+                color: #{get-text-color($theme)};
             }
             &:active {
                 background-color: var(--#{$theme}-lighter);
@@ -99,7 +99,7 @@
             background-color: var(--#{$theme});
             box-shadow: 0 10px 25px -10px var(--#{$theme}), 
                         0 -5px 10px -10px var(--#{$theme});
-            color: #{get-text-color-variable($theme)};
+            color: #{get-text-color($theme)};
             
             &:hover,
             &:focus {
