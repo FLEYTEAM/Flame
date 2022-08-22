@@ -1,0 +1,92 @@
+// Theme customize
+:root[data-theme="light"] { 
+	.form__input {
+        --input-border-color: #{$gray-200};
+        --input-text-color: #{$gray-700};
+        --input-placeholder-color: #{$gray-400};
+
+        --input-focus-border-color: #{$gray-500};
+
+        &.form__input--shadow {
+            --input-shadow-default: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+            --input-shadow-focus: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), rgba(0, 0, 0, 0.2) 0px -.5px 0px .75px inset;
+        }
+    }
+}
+:root[data-theme="dark"] { 
+	.form__input {
+        --input-border-color: #{$gray-700};
+        --input-text-color: #{$gray-700};
+        --input-placeholder-color: #{$gray-500};
+
+        --input-focus-border-color: #{$gray-500};
+
+        &.form__input--shadow {
+            --input-shadow-default: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em;
+            --input-shadow-focus: 0 4px 8px rgba(0, 0, 0, .25), 0 1px 5px rgba(0, 0, 0, .25), rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+    }
+}
+
+.form__input {
+    --input-vertical-spacing: .5rem;
+    --input-horizontal-spacing: 1rem;
+
+    --input-display: block;
+    --input-width: 100%;
+    --input-font-weight: 400;
+    --input-background-color: transparent;
+
+    --input-border-width: 1px;
+    --input-border-style: solid;
+
+    display: var(--input-display);
+    width: var(--input-width);
+    outline: 0;
+    line-height: var(--line-height);
+    font-weight: var(--input-font-weight);
+    font-size: var(--font-size);
+    transition: border var(--transition), box-shadow var(--transition);
+    background-color: var(--input-background-color);
+
+    padding: var(--input-vertical-spacing) var(--input-horizontal-spacing);
+    border-radius: var(--border-radius);
+    
+    border-width: var(--input-border-width);
+    border-style: var(--input-border-style);
+    border-color: var(--input-border-color);
+
+    &::placeholder {
+        color: var(--input-placeholder-color);
+    }
+
+    &:focus {
+        border-color: var(--input-focus-border-color);
+        box-shadow: 0 0 0 1px var(--input-focus-border-color) inset;
+    }
+    // Theme customize
+    @each $theme, $color in $theme-colors {
+        &.form__input--#{$theme} {
+            &:focus {
+                --input-focus-border-color: #{$color};
+            }
+        }
+    }
+
+    // Shadow
+    &.form__input--shadow {
+        border: 0 !important;
+        box-shadow: var(--input-shadow-default);
+        
+        &:focus {
+            box-shadow: var(--input-shadow-focus);
+        }
+    }
+
+}
+
+// Plain text
+.form__input--plain-text{
+    border: 0 !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,9 @@
+@each $breakpoint, $size in $breakpoints {
+    @media only screen and (min-width: $size) {
+        @each $name, $value in $width {
+            .w#{get-breakpoint-name($breakpoint)}--#{$name} {
+                width: $value;
+            }
+        }
+    }
+}
