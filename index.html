@@ -512,10 +512,10 @@
     </section>
 
     <!-- FORM -->
-    <section id="Pagination" class="container">
+    <section id="Form" class="container">
         <h1>Form components</h1>
         <div class="group m--3">
-            <h2>Input</h2>
+            <h2 id="Input">Input</h2>
             <div class="group m--3">
                 <div><b>Default</b></div>
                 <div class="m--3">
@@ -562,6 +562,68 @@
                 </div>
             </div>
         </div>
+
+        <div class="group m--3">
+            <h2 id="InputGroup">Input group</h2>
+            <div class="group m--3">
+                <div><b>Default</b></div>
+                <div class="m--3 form__input-group">
+                    <input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input">
+                </div>
+                <div><b>Shadow</b></div>
+                <div class="m--3 form__input-group form__input-group--shadow">
+                    <input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input">
+                </div>
+            </div>
+            <div class="group m--3 d--flex flex-wrap--wrap">
+                <div class="w--100"><b>Theme</b></div>
+                <div class="p--3 w--50">
+                    <div class="form__input-group form__input-group--primary"><input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input primary"></div>
+                </div>
+                <div class="p--3 w--50">
+                    <div class="form__input-group form__input-group--secondary"><input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input secondary"></div>
+                </div>
+                <div class="p--3 w--50">
+                    <div class="form__input-group form__input-group--warning"><input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input warning"></div>
+                </div>
+                <div class="p--3 w--50">
+                    <div class="form__input-group form__input-group--danger"><input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input danger"></div>
+                </div>
+                <div class="p--3 w--50">
+                    <div class="form__input-group form__input-group--info"><input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input info"></div>
+                </div>
+                <div class="p--3 w--50">
+                    <div class="form__input-group form__input-group--success"><input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input success"></div>
+                </div>
+                <div class="p--3 w--50">
+                    <div class="form__input-group form__input-group--dark"><input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input dark"></div>
+                </div>
+                <div class="p--3 w--50">
+                    <div class="form__input-group form__input-group--light"><input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input light"></div>
+                </div>
+            </div>
+            <div class="group m--3">
+                <div><b>Text</b></div>
+                <div class="m--3 form__input-group">
+                    <label class="form__input-group--text">Hello</label>
+                    <input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input">
+                </div>
+                <div class="m--3 form__input-group form__input-group--shadow">
+                    <label class="form__input-group--text">Hello</label>
+                    <input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input">
+                </div>
+                <div><b>Button</b></div>
+                <div class="m--3 form__input-group">
+                    <input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input">
+                    <button type="button" class="button button--dark">Hello</button>
+                </div>
+                <div class="m--3 form__input-group form__input-group--shadow">
+                    <input type="text" name="exampleDefault" class="form__input form__input--plain-text" placeholder="Form input">
+                    <button type="button" class="button button__shadow--dark">Hello</button>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 

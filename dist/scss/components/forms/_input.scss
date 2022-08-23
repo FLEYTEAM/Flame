@@ -1,34 +1,34 @@
 // Theme customize
 :root[data-theme="light"] { 
-	.form__input {
+	.form__input, .form__input-group {
         --input-border-color: #{$gray-200};
         --input-text-color: #{$gray-700};
         --input-placeholder-color: #{$gray-400};
 
-        --input-focus-border-color: #{$gray-500};
+        --input-focus-border-color: #{$gray-400};
 
-        &.form__input--shadow {
+        &.form__input--shadow, &.form__input-group--shadow {
             --input-shadow-default: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
             --input-shadow-focus: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), rgba(0, 0, 0, 0.2) 0px -.5px 0px .75px inset;
         }
     }
 }
 :root[data-theme="dark"] { 
-	.form__input {
+	.form__input, .form__input-group {
         --input-border-color: #{$gray-700};
         --input-text-color: #{$gray-700};
         --input-placeholder-color: #{$gray-500};
 
         --input-focus-border-color: #{$gray-500};
 
-        &.form__input--shadow {
+        &.form__input--shadow, &.form__input-group--shadow {
             --input-shadow-default: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em;
             --input-shadow-focus: 0 4px 8px rgba(0, 0, 0, .25), 0 1px 5px rgba(0, 0, 0, .25), rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
         }
     }
 }
 
-.form__input {
+.form__input, .form__input-group {
     --input-vertical-spacing: .5rem;
     --input-horizontal-spacing: 1rem;
 
@@ -37,7 +37,7 @@
     --input-font-weight: 400;
     --input-background-color: transparent;
 
-    --input-border-width: 1px;
+    --input-border-width: var(--border-width);
     --input-border-style: solid;
 
     display: var(--input-display);
@@ -49,13 +49,72 @@
     transition: border var(--transition), box-shadow var(--transition);
     background-color: var(--input-background-color);
 
-    padding: var(--input-vertical-spacing) var(--input-horizontal-spacing);
     border-radius: var(--border-radius);
     
     border-width: var(--input-border-width);
     border-style: var(--input-border-style);
     border-color: var(--input-border-color);
+    
+}
 
+.form__input-group {
+    display: flex;
+
+    &:focus-within {
+        border-color: var(--input-focus-border-color);
+        box-shadow: 0 0 0 1px var(--input-focus-border-color) inset;
+    }
+
+    &.form__input-group--shadow {
+        border: 0 !important;
+        box-shadow: var(--input-shadow-default);
+        
+        &:focus-within {
+            box-shadow: var(--input-shadow-focus);
+        }
+    }
+
+    .button {
+        margin: -1px;
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+    }
+
+    // Input group text
+    .form__input-group--text {
+        --input-group-text-display: inline-block;
+        --input-group-text-background-color: transparent;
+        display: var(--input-group-text-display);
+        background-color: var(--input-group-text-background-color);
+        font-weight: var(--input-font-weight);
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        white-space: nowrap;
+        z-index: -1;
+        padding: var(--input-vertical-spacing) var(--input-horizontal-spacing);
+    
+        &:first-child {
+            border-top-left-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
+        }
+        &:last-child {
+            border-top-right-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+        }
+    }
+}
+
+.form__input {
+    
+    padding: var(--input-vertical-spacing) var(--input-horizontal-spacing);
+    
     &::placeholder {
         color: var(--input-placeholder-color);
     }
@@ -63,14 +122,6 @@
     &:focus {
         border-color: var(--input-focus-border-color);
         box-shadow: 0 0 0 1px var(--input-focus-border-color) inset;
-    }
-    // Theme customize
-    @each $theme, $color in $theme-colors {
-        &.form__input--#{$theme} {
-            &:focus {
-                --input-focus-border-color: #{$color};
-            }
-        }
     }
 
     // Shadow
@@ -83,6 +134,20 @@
         }
     }
 
+}
+
+// Theme customize
+@each $theme, $color in $theme-colors {
+    .form__input.form__input--#{$theme} {
+        &:focus {
+            --input-focus-border-color: #{$color};
+        }
+    }
+    .form__input-group.form__input-group--#{$theme} {
+        &:focus-within {
+            --input-focus-border-color: #{$color};
+        }
+    }
 }
 
 // Plain text
