@@ -73,7 +73,7 @@ Inspired by [BEM](https://getbem.com/introduction/).
 ### Option 1: CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fleyteam/flame/dist/css/flame.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fleyteam/flame@latest/dist/css/flame.min.css">
 <!-- JS for dropdown, ignore this one if you are using JS Framework -->
 
 <script src="https://cdn.jsdelivr.net/gh/fleyteam/flame/dist/js/base.js"><script>
