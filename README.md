@@ -1,8 +1,8 @@
-![Flame Logo](https://fleyteam.github.io/Flame/imgs/flame-logo-bg.png)
+![Flame Logo](./imgs/flame-logo-bg.png)
 
 **Flame** is a lightweight, utility-first CSS kit designed for simplicity, responsiveness, and scalability. Built with clean and consistent **BEM class naming**, it offers a structured way to write HTML and CSS — ideal for both small prototypes and large front-end projects.
 
-DEMO Components: [Flame](https://fleyteam.github.io/Flame)
+DEMO Components: [Flame](https://liervelom.github.io/Flame/)
 
 ## 🎯 Purpose
 
